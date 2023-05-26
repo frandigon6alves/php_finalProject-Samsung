@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>Registration</h2>
+      </div>
+
+      <form id="form" class="form">
+        <div class="form-control">
+          <label for="username">Nombre</label>
+          <input type="text" id="username" placeholder="Escribe tu nombre aqui..." />
+          <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
+          <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
+          <small>mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="firstSurname">Primer Apellido</label>
+          <input type="text" id="firstSurname" placeholder="Escribe tu nombre aqui..." />
+          <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
+          <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
+          <small>mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+            <label for="secoundSurname">Segundo Apellido</label>
+            <input type="text" id="secoundSurname" placeholder="Escribe tu primer apellido aqui..." />
+            <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
+            <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
+            <small>mensagem de erro</small>
+          </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Escribe tu email aqui..." />
+          <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
+          <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
+          <small>mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password">Clave</label>
+          <input type="password" id="password" placeholder="Escribe tu clave aqui..." />
+          <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
+          <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
+          <small>mensagem de erro</small>
+        </div>
+
+        <div class="form-control">
+          <label for="password-confirmation">Confirme su clave</label>
+          <input type="password" id="password-confirmation" placeholder="Escribe tu clave aqui..." />
+          <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
+          <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
+          <small>mensagem de erro</small>
+        </div>
+
+        <button type="submit" id="submit-btn">Inscribirse</button>
+      </form>
+    </div>
+    
+    <script src="./index.js"></script>
+  </body>
+</html>
