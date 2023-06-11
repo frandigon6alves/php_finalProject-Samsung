@@ -1,22 +1,23 @@
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const firstSurname = document.getElementById("firstSurname");
-const secoundSurname = document.getElementById("secoundSurname");
+const secondSurname = document.getElementById("secondSurname");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const passwordConfirmation = document.getElementById("password-confirmation");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  checkInputs();
+  let valid = checkInputs();
+  if(!valid) {
+    e.preventDefault();
+  }
 });
 
 //para realizar la validación de las Inputs de éxito y error//
 function checkInputs() {
   const usernameValue = username.value;
   const firstSurnameValue = firstSurname.value;
-  const secoundSurnameValue = secoundSurname.value;
+  const secondSurnameValue = secondSurname.value;
   const emailValue = email.value;
   const passwordValue = password.value;
   const passwordConfirmationValue = passwordConfirmation.value;
@@ -43,15 +44,15 @@ function checkInputs() {
     setSuccessFor(firstSurname);
   }
 
-  if (secoundSurname === "") {
+  if (secondSurname === "") {
     console.log(1);
-    setErrorFor(secoundSurname, "Rellene este campo.");
-  } else if (checkUsername(secoundSurnameValue) == false) {
+    setErrorFor(secondSurname, "Rellene este campo.");
+  } else if (checkUsername(secondSurnameValue) == false) {
     console.log(2);
-    setErrorFor(secoundSurname, "Caracteres inválidos.");
+    setErrorFor(secondSurname, "Caracteres inválidos.");
   } else {
     console.log(3);
-    setSuccessFor(secoundSurname);
+    setSuccessFor(secondSurname);
   }
 
   if (emailValue === "") {
@@ -85,10 +86,11 @@ function checkInputs() {
 
   if (formIsValid) {
     alert("La inscripción ha sido correcta!");
-
     // Redirigir a la página de consulta
     window.location.href = "consulta.html";
   }
+
+  return formIsValid;
 }
 
 function setErrorFor(input, message) {
@@ -114,7 +116,7 @@ function checkUsername(username) {
 }
 
 function checkEmail(email) {
-  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+ return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
     email
   );
 }

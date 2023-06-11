@@ -10,6 +10,7 @@
     min-height: 100vh;
     background: linear-gradient(90deg, #00dbde 0%, #b6c2c1 100%);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -26,7 +27,19 @@
   .header {
     background-color: #eee;
     padding: 20px;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+  .header input{
+    background-color: #0d9a9d;
+    border: 2px solid #abb2b3;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 10px;
+    padding: 8px;
+}
   
   .form {
     padding: 20px;
@@ -66,7 +79,7 @@
     visibility: hidden;
   }
   
-  .form button {
+  .form input[type=submit] {
     background-color: #0d9a9d;
     border: 2px solid #abb2b3;
     color: #fff;

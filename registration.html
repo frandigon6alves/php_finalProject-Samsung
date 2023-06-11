@@ -17,12 +17,13 @@
     <div class="container">
       <div class="header">
         <h2>Registration</h2>
+        <input class="btn" type="button" value="CONSULTA" onclick="location.href='search.php'" style="background-color: #078082; border: 2px solid #abb2b3;">
       </div>
 
-      <form id="form" class="form">
+      <form id="form" class="form" method="POST" action="submit.php">
         <div class="form-control">
           <label for="username">Nombre</label>
-          <input type="text" id="username" placeholder="Escribe tu nombre aqui..." />
+          <input type="text" id="username" name="username" placeholder="Escribe tu nombre aqui..."/>
           <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
           <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
           <small>mensagem de erro</small>
@@ -30,7 +31,7 @@
 
         <div class="form-control">
           <label for="firstSurname">Primer Apellido</label>
-          <input type="text" id="firstSurname" placeholder="Escribe tu nombre aqui..." />
+          <input type="text" id="firstSurname" name="firstSurname" placeholder="Escribe tu nombre aqui..." />
           <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
           <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
           <small>mensagem de erro</small>
@@ -38,7 +39,7 @@
 
         <div class="form-control">
             <label for="secoundSurname">Segundo Apellido</label>
-            <input type="text" id="secoundSurname" placeholder="Escribe tu primer apellido aqui..." />
+            <input type="text" id="secondSurname" name="secondSurname" placeholder="Escribe tu primer apellido aqui..." />
             <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
             <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
             <small>mensagem de erro</small>
@@ -46,7 +47,7 @@
 
         <div class="form-control">
           <label for="email">Email</label>
-          <input type="text" id="email" placeholder="Escribe tu email aqui..." />
+          <input type="text" id="email" name="email" placeholder="Escribe tu email aqui..." />
           <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
           <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
           <small>mensagem de erro</small>
@@ -54,7 +55,7 @@
 
         <div class="form-control">
           <label for="password">Clave</label>
-          <input type="password" id="password" placeholder="Escribe tu clave aqui..." />
+          <input type="password" id="password" name="password" placeholder="Escribe tu clave aqui..." />
           <i><img class="img-error" src="images/ima_genes/error-icon.svg" alt="" /></i>
           <i><img class="img-success" src="images/ima_genes/success-icon.svg" alt="" /></i>
           <small>mensagem de erro</small>
@@ -68,10 +69,9 @@
           <small>mensagem de erro</small>
         </div>
 
-        <button type="submit" id="submit-btn">Inscribirse</button>
+        <input type="submit" id="submit-btn" value="Inscribirse"/>
       </form>
     </div>
-    
     <script src="./index.js"></script>
   </body>
 </html>
